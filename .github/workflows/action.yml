@@ -19,12 +19,6 @@ on:
           - apply # applies config
         default: "plan"
 
-      - uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ vars.AWS_REGION }}
-
 # JOBS
 jobs:
   terraform:
@@ -40,9 +34,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Uses HashiCorp's official action to install Terraform
-      - uses: hashicorp/setup-terraform@v3
+      # Configure AWS credentials from GitHub Secrets
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      # Install Terraform
       - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.6
 
       # Terraform Init
       - name: Terraform Init
