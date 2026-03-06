@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Josyula | Cloud Infrastructure Portfolio</title>
+    <meta name="description" content="Cloud infrastructure project by Anurag Josyula — S3, CloudFront & Terraform">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="container">
+        <header class="hero">
+            <div class="hero-badge">CLOUD INFRASTRUCTURE PROJECT</div>
+            <h1 class="hero-title">
+                <span class="greeting">Hi, I'm</span>
+                <span class="name-highlight">Anurag Josyula</span>
+            </h1>
+            <p class="hero-subtitle">This site is hosted on <strong>AWS S3</strong>, delivered via <strong>CloudFront
+                    CDN</strong>, and deployed entirely with <strong>Terraform</strong>.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value" id="latencyStat">—</span>
+                    <span class="stat-label">Load Time</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">Edge</span>
+                    <span class="stat-label">CDN Cached</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">IaC</span>
+                    <span class="stat-label">Terraform</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="features">
+                <div class="feature-card" data-index="0">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">☁️</div>
+                        <div class="icon-ring"></div>
+                    </div>
+                    <h3>Amazon S3</h3>
+                    <p>Static assets stored in a private S3 bucket with origin access control — no public access needed.
+                    </p>
+                    <div class="card-tag">Storage</div>
+                </div>
+
+                <div class="feature-card" data-index="1">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">⚡</div>
+                        <div class="icon-ring"></div>
+                    </div>
+                    <h3>CloudFront CDN</h3>
+                    <p>Edge-cached globally for sub-second load times. HTTPS by default with automatic compression.</p>
+                    <div class="card-tag">Delivery</div>
+                </div>
+
+                <div class="feature-card" data-index="2">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">🏗️</div>
+                        <div class="icon-ring"></div>
+                    </div>
+                    <h3>Terraform IaC</h3>
+                    <p>Every resource defined as code — version controlled, reproducible, and fully automated.</p>
+                    <div class="card-tag">Automation</div>
+                </div>
+            </section>
+
+            <section class="architecture-section">
+                <h2 class="section-title">How It Works</h2>
+                <div class="architecture-flow">
+                    <div class="flow-step">
+                        <div class="flow-number">1</div>
+                        <div class="flow-content">
+                            <h4>User Request</h4>
+                            <p>Browser hits the CloudFront URL</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"><span>→</span></div>
+                    <div class="flow-step">
+                        <div class="flow-number">2</div>
+                        <div class="flow-content">
+                            <h4>CloudFront Edge</h4>
+                            <p>Serves cached content from nearest POP</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"><span>→</span></div>
+                    <div class="flow-step">
+                        <div class="flow-number">3</div>
+                        <div class="flow-content">
+                            <h4>S3 Origin</h4>
+                            <p>Fetches from bucket via OAC on cache miss</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo-section">
+                <h2 class="section-title">Interactive Demo</h2>
+                <div class="demo-controls">
+                    <button id="colorButton" class="btn btn-primary">
+                        <span class="btn-icon">🌙</span> Toggle Theme
+                    </button>
+                    <button id="counterButton" class="btn btn-accent">
+                        <span class="btn-icon">👆</span> Clicks: <span id="counter">0</span>
+                    </button>
+                </div>
+
+                <div class="status-bar">
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span>Status: <strong id="status">Active</strong></span>
+                    </div>
+                    <div class="deploy-info">
+                        <span class="mono">terraform apply</span> ✓
+                    </div>
+                </div>
+            </section>
+
+            <section class="tech-stack-section">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="tech-grid">
+                    <div class="tech-pill">AWS S3</div>
+                    <div class="tech-pill">CloudFront</div>
+                    <div class="tech-pill">Terraform</div>
+                    <div class="tech-pill">OAC</div>
+                    <div class="tech-pill">Route 53</div>
+                    <div class="tech-pill">HTML / CSS / JS</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Built by <strong>Anurag Josyula</strong> &middot; Powered by Terraform &amp; AWS &middot; 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

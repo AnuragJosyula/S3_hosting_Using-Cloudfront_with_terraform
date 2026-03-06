@@ -1,0 +1,14 @@
+# ── Ignore everything at root first ──
+/*
+
+# ── Un-ignore what we want tracked ──
+!.gitignore
+!.github/
+!day09(cloudfront_s3_hosting)/
+
+# ── Ignore Terraform artifacts inside day09 ──
+day09(cloudfront_s3_hosting)/.terraform/
+day09(cloudfront_s3_hosting)/.terraform.lock.hcl
+day09(cloudfront_s3_hosting)/*.tfstate
+day09(cloudfront_s3_hosting)/*.tfstate.*
+day09(cloudfront_s3_hosting)/*.tfvars
