@@ -130,5 +130,5 @@ terraform destroy
 - CloudFront uses **Origin Access Control (OAC)** — the modern replacement for OAI
 - Bucket policy only allows access from the specific CloudFront distribution
 - All viewer traffic is **redirected to HTTPS**
-- AWS credentials are stored as **GitHub Secrets** (never in code)
+- AWS credentials are stored as **GitHub Secrets** (never in code), Further Implementation - Github OIDC provider
 - Terraform state is stored in a **remote S3 backend**
