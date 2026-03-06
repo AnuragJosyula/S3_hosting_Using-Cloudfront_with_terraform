@@ -28,7 +28,7 @@ jobs:
     # Set the working directory for all run steps in this job
     defaults:
       run:
-        working-directory: day09(cloudfront_s3_hosting)
+        working-directory: cloudfront-s3-hosting
 
     steps:
       - name: Checkout repository

@@ -4,11 +4,11 @@
 # ── Un-ignore what we want tracked ──
 !.gitignore
 !.github/
-!day09(cloudfront_s3_hosting)/
+!cloudfront-s3-hosting/
 
-# ── Ignore Terraform artifacts inside day09 ──
-day09(cloudfront_s3_hosting)/.terraform/
-day09(cloudfront_s3_hosting)/.terraform.lock.hcl
-day09(cloudfront_s3_hosting)/*.tfstate
-day09(cloudfront_s3_hosting)/*.tfstate.*
-day09(cloudfront_s3_hosting)/*.tfvars
+# ── Ignore Terraform artifacts inside cloudfront-s3-hosting ──
+cloudfront-s3-hosting/.terraform/
+cloudfront-s3-hosting/.terraform.lock.hcl
+cloudfront-s3-hosting/*.tfstate
+cloudfront-s3-hosting/*.tfstate.*
+cloudfront-s3-hosting/*.tfvars

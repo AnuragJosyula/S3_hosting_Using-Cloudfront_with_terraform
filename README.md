@@ -32,7 +32,7 @@ Infrastructure-as-Code project that deploys a **static website** on AWS using **
 .
 ├── .github/workflows/
 │   └── action.yml              # GitHub Actions CI/CD pipeline
-├── day09(cloudfront_s3_hosting)/
+├── cloudfront-s3-hosting/
 │   ├── main.tf                 # S3, CloudFront, OAC, bucket policy
 │   ├── variables.tf            # Input variables (bucket name)
 │   ├── providers.tf            # AWS provider config
@@ -99,7 +99,7 @@ Checkout → Configure AWS Creds → Setup Terraform → Init → Validate → P
 ## 🖥️ Local Usage
 
 ```bash
-cd day09(cloudfront_s3_hosting)
+cd cloudfront-s3-hosting
 
 # Initialize Terraform
 terraform init
