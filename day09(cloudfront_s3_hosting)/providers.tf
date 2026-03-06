@@ -9,7 +9,7 @@ terraform {
 }
 # AWS provider config
 provider "aws" {
-  region = var.region
+  region = "us-east-1"
 
   default_tags {
     tags = {
