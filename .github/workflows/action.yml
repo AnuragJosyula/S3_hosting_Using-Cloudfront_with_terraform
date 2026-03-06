@@ -3,7 +3,7 @@
 # Trigger: Manual (workflow_dispatch) on main branch
 # ============================================================
 
-name: Terraform CI/CD_S3_hosting_Using_Cloudfront
+name: Terraform Plan/Apply
 
 # workflow_dispatch = manual trigger from GitHub UI
 
